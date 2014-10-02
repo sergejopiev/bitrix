@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ 	<head>
+  		<meta charset="utf-8">
+		<title>Простейший пример навигации между двумя табами на jquery</title>
+		<script src="http://yastatic.net/jquery/1.10.1/jquery.min.js"></script>
+	</head>
+	<body>
+		
+		<h2 class="superoffers__header" data-tab="offers">
+		    <span>Спецпредложения месяца</span>
+		    <a href="#" class="link">Новинки</a>
+		</h2>
+		<h2 style="display:none;" class="superoffers__header" data-tab="new">
+		    <a href="#" class="link">Спецпредложения месяца</a>
+		    <span class="active">Новинки</span>
+		</h2>
+		<div class="superoffers__tab _offers">
+		    Спецпредложения месяца
+		</div>
+		<div class="superoffers__tab _new" style="display:none;">
+		    Новинки
+		</div>
+
+		<script>
+		$(document).ready(function(){
+		    $('.superoffers__header .link').click(function(e){
+		        e.preventDefault();
+		        $('.superoffers__header').toggle();
+		        $('.superoffers__tab').toggle();
+		    });
+		});
+		</script>
+
+	</body>
+</html>
